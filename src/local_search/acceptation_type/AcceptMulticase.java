@@ -53,8 +53,7 @@ public class AcceptMulticase extends AcceptableCandidate {
 				pAccept = Math.exp(-(1-total)/T);
 			}
 			else if (DominanceRank(stateCandidate, list) > DominanceRank(stateCurrent, list) && DominanceRank(stateCurrent, list)!= 0){
-				float value = 0;
-				if (DominanceRank(stateCurrent, list) !=0 ) value =DominanceRank(stateCandidate, list)/DominanceRank(stateCurrent, list);
+				float value = DominanceRank(stateCandidate, list)/DominanceRank(stateCurrent, list);
 				pAccept = Math.exp(-(value+1)/T);
 			}
 			else{
